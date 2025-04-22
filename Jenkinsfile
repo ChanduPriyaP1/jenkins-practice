@@ -34,7 +34,6 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stages {
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
@@ -49,7 +48,7 @@ pipeline {
             }
         }
     }
-    }
+    
     post { 
         always { 
             echo 'I will always say Hello again!'
