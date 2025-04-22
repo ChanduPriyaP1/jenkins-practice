@@ -2,6 +2,8 @@ pipeline {
     agent any
     options {
         timeout(time: 10, unit: 'SECONDS') 
+        disableConcurrentBuilds()
+        ansiColor('xterm')
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
