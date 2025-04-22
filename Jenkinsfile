@@ -10,27 +10,19 @@ pipeline {
                 ENV_PIPE = 'pipeline Area'
             }
     stages {
-        environment {
-                    ENV_STAGES = 'Stages Area'
-            }
+        
         stage('Build') {
-            environment {
-                    ENV_STAGE = 'Stage Area'
-            }
+            
             steps {
-                environment {
-                    ENV_STEP = 'Steps Area'
-            }
                 echo 'Building..'
-                sh 'locatio is :$ENV_STAGE'
-                sh 'locatio is :$ENV_STAGES'
-                sh 'locatio is :$ENV_STEP'
+                sh 'locatio is :$ENV_PIPE'
+               
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'locatio is :$ENV_PIPE'
+                
 
             }
         }
