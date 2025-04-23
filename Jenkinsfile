@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        lable 'MYNODE'
-    }
+    agent any
     options {
         timeout(time: 30, unit: 'MINUTES') 
         disableConcurrentBuilds()
