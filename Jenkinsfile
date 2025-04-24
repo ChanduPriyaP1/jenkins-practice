@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        lable 'jenkins'
+    }
+    
+
     options {
         timeout(time: 30, unit: 'MINUTES') 
         disableConcurrentBuilds()
@@ -13,6 +17,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo 'Agent Practice'
             }
         }
         stage('Test') {
