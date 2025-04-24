@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        lable 'jenkins'
+        label 'jenkins'
     }
     
 
